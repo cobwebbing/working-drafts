@@ -21,3 +21,22 @@ img:hover {
     margin: auto;
     text-align: left;
 }
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.image-grid img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.image-grid img:hover {
+    transform: scale(1.1);
+}
