@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escapril 2024</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        #content {
+            max-width: 800px;
+            margin: auto;
+            text-align: left;
+        }
+    </style>
+    <script>
+        async function fetchGoogleDoc() {
+            const docId = "1n91Nn2ClvSrG_BeblHuwEhAtnNBzyjd0_SF7j2g4hRI"; // Replace with your Google Doc ID
+            const url = `https://docs.google.com/document/d/${docId}/export?format=txt`;
+
+            try {
+                const response = await fetch(url);
+                const text = await response.text();
+                document.getElementById("content").innerText = text;
+            } catch (error) {
+                document.getElementById("content").innerText = "Error loading document.";
+            }
+        }
+
+        window.onload = fetchGoogleDoc;
+    </script>
+</head>
+<body>
+    <h1>Escapril 2024</h1>
+    <div id="content">Loading...</div>
+</body>
+</html>
