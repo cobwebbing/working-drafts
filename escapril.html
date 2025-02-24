@@ -8,14 +8,14 @@
     <script>
         async function fetchGoogleDoc() {
             const docId = "1n91Nn2ClvSrG_BeblHuwEhAtnNBzyjd0_SF7j2g4hRI"; // Replace with your Google Doc ID
-            const url = `https://docs.google.com/document/d/${docId}/export?format=txt`;
+            const url = `https://docs.google.com/document/d/${docId}/export?format=html`;
 
             try {
                 const response = await fetch(url);
                 const text = await response.text();
-                document.getElementById("content").innerText = text;
+                document.getElementById("content").innerHTML = text;
             } catch (error) {
-                document.getElementById("content").innerText = "Error loading document.";
+                document.getElementById("content").innerHTML = "Error loading document.";
             }
         }
 
