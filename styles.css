@@ -1,0 +1,23 @@
+body {
+    font-family: Georgia, serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #333;  /* Dark gray background */
+    color: white;  /* White text for contrast */
+}
+
+img {
+    width: 300px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+#content {
+    max-width: 800px;
+    margin: auto;
+    text-align: left;
+}
